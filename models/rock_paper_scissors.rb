@@ -6,7 +6,9 @@ class Game
   end
 
   def play()
-    if @option1 == "rock" && @option2 == "paper"
+    if @option1 == @option2
+      return "Draw!"
+    elsif @option1 == "rock" && @option2 == "paper"
       return "Paper wins!"
     elsif @option1 == "paper" && @option2 == "rock"
       return "Paper wins!"
@@ -19,7 +21,7 @@ class Game
     elsif @option1 == "scissors" && @option2 == "paper"
       return "Scissors wins!"
     else
-      return "Draw!"
+      return "You can only play 'rock', 'paper' or 'scissors'!"
     end
   end
 
